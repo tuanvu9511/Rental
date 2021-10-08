@@ -60,21 +60,30 @@
 				@enderror
 			</fieldset>
 			<fieldset class="form-group">
-				<label class="">Serial Number</label>
-				<input class="form-control" name="serialnumber" id="serialnumber">
-				@error('serialnumber')
+				<label for="exampleSelect1">
+					Supplier
+					( <input onclick="newsupplierfunction()" id="new_supplier" type="checkbox"> new)
+
+				</label>
+				<select  class="form-control" name="select_supplier" id="select_supplier">
+					<option value="">Select One</option>
+					<option>1</option>
+					<option>1</option>
+					<option>1</option>
+					<option>1</option>
+				</select>
+				<input type="text" class="form-control" name="input_supplier" id="input_supplier" placeholder="Please type new Supplier" hidden disabled>
+				@error('input_supplier')
 				    <p class="text-danger">{{ $message }}</p>
 				@enderror
 			</fieldset>
 			<fieldset class="form-group">
-				<label class="mr-4">Information</label>
-				<textarea class="form-control" name="information" id="informationproduct"></textarea> 
+				<label class="mr-4">Quantity</label>
+				<input type="number" class="form-control" name="quantity" id="quantity">
 			</fieldset>
-			<fieldset class="form-group" hidden>
-				<label class="mr-4">Stockable</label>
-				<input class="form-control" name="stockable" id="stockable">
+			<fieldset class="form-group text-center">
+				<button type="submit" class="btn btn-primary">Submit</button>
 			</fieldset>
-			<button type="submit" class="btn btn-primary">Submit</button>
 		</form>
 	</div>
 </div>
@@ -115,6 +124,5 @@
 			$("#input_newcategory").prop({'hidden':true,'disabled':true});
 		}
 	}
-
 </script>
 @endsection
