@@ -19,10 +19,6 @@ class productService implements productServiceInterface
 		// "select_productcategory": "1",
 		// "select_productbrand": "1",
 		// "select_productspecification": "1",
-		// "serialnumber": "123",
-		// "information": null,
-		// "stockable": null
-			$nameproduct = 'C'.$data['select_productcategory'].'B'.$data['select_productbrand'].'S'.$data['select_productspecification'];
 	        return new ResultBase(true, $data, '', 200);
       } 
       catch (Exception $ex) 

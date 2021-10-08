@@ -90,4 +90,7 @@ class products extends Controller
 	{
 		//
 	}
+	public function getlistcataloge($id){
+		$data = $this->productService->getlistcataloge();
+	}
 }

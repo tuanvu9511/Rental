@@ -16,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::resource('product',products::class);
+Route::post('product/getlistCataloge',[products::class,'getlistCataloget'])->name('product.getlistcataloge');
